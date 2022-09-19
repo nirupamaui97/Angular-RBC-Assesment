@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FeaturePresentationalModule } from '@angular-anim/shared/presentational';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FeatureAccountSummaryModule } from '@angular-anim/feature/account-summary';
+import { AccountSummaryComponent, FeatureAccountSummaryModule } from '@angular-anim/feature/account-summary';
 import { SharedStoreModule } from '@angular-anim/shared/store';
 import { StoreModule } from '@ngrx/store';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AccountRoutingDetailsComponent } from './account-routing-details/account-routing-details.component';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent],
+  declarations: [AppComponent, AboutComponent, AccountDetailsComponent, AccountRoutingDetailsComponent],
   imports: [
     BrowserModule,
     CommonModule,
@@ -22,6 +24,7 @@ import { StoreModule } from '@ngrx/store';
     StoreModule.forRoot({})
   ],
   providers: [],
+  exports: [AppRoutingModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

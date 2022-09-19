@@ -1,4 +1,10 @@
 <h1>Account Details</h1>
 
 <p>Account ID</p>
-<!-- TODO: how to retrieve account id and other account details in this route? -->
+<tr *ngFor="let account of filterAccounts(accounts)">   
+    <th><a routerLink='/accountDetails/{{ account.id}}'>{{ account.id}}</a></th>    
+  </tr>
+
+  <router-outlet></router-outlet>
+
+ 
